@@ -149,20 +149,25 @@ export default {
   },
   methods: {
     async fetchLocations() {
-      await axios.get(`http://my-finecard.online/api/Locations/${localStorage.getItem('companyId')}`, {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-            "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
-            "Authorization": `Bearer ${localStorage.getItem('authToken')}`
-          }
-        }
-      ).then(response => {
-        console.log(response.data)
-        this.locations = response.data
-      }).catch(error => {
-        alert(error.message)
-      });
+      // await axios.get(`http://my-finecard.online/api/Locations/${localStorage.getItem('companyId')}`, {
+      //     headers: {
+      //       "Access-Control-Allow-Origin": "*",
+      //       "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+      //       "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
+      //       "Authorization": `Bearer ${localStorage.getItem('authToken')}`
+      //     }
+      //   }
+      // ).then(response => {
+      //   console.log(response.data)
+      //   this.locations = response.data
+      // }).catch(error => {
+      //   alert(error.message)
+      // });
+      this.locations = [
+        {id: 1, name: "Simple Coffee Малышева", address: "Малышева, 41", date: "03.03.2022", archived: false},
+        {id: 2, name: "Simple Coffee Щербакова", address: "Щербакова, 25", date: "03.03.2022", archived: false},
+        {id: 3, name: "Simple Coffee Мельникова", address: "Мельникова, 17", date: "03.03.2022", archived: false},
+      ]
     },
     changeLocationsToArchival() {
       this.currentLocationsIndicator = false;

@@ -5,6 +5,7 @@
       <tr style="color: gray">
         <td>Название</td>
         <td>Адрес</td>
+        <td>Оплачено до</td>
       </tr>
       </thead>
       <tbody>
@@ -15,6 +16,7 @@
       >
         <td> {{ location.name }} </td>
         <td> {{ location.address }} </td>
+        <td> {{ location.date }} </td>
         <button
           style="font-size: x-large;border: none;background-color: inherit; color: blue; padding-bottom: 2%"
           @click="show(location.id)"

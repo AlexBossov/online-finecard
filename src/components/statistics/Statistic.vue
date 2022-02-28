@@ -733,25 +733,36 @@ export default {
   },
   methods: {
     async fetchLocations() {
-      await axios.get(`http://my-finecard.online/api/Locations/${localStorage.getItem('companyId')}`, {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-            "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
-            "Authorization": `Bearer ${localStorage.getItem('authToken')}`
-          }
-        }
-      ).then(response => {
-        this.locations = response.data
+      // await axios.get(`http://my-finecard.online/api/Locations/${localStorage.getItem('companyId')}`, {
+      //     headers: {
+      //       "Access-Control-Allow-Origin": "*",
+      //       "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+      //       "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
+      //       "Authorization": `Bearer ${localStorage.getItem('authToken')}`
+      //     }
+      //   }
+      // ).then(response => {
+      //   this.locations = response.data
+      //   this.options = [
+      //     { value: null, text: 'Все локации' },
+      //     { value: this.locations[0].name, text: this.locations[0].name },
+      //     { value: this.locations[1].name, text: this.locations[1].name },
+      //     { value: this.locations[2].name, text: this.locations[2].name },
+      //   ]
+      // }).catch(error => {
+      //   alert(error.message)
+      // });
+        this.locations = [
+          {id: 1, name: "Simple Coffee Малышева", address: "Малышева, 41", date: "03.03.2022", archived: false},
+          {id: 2, name: "Simple Coffee Щербакова", address: "Щербакова, 25", date: "03.03.2022", archived: false},
+          {id: 3, name: "Simple Coffee Мельникова", address: "Мельникова, 17", date: "03.03.2022", archived: false}
+        ]
         this.options = [
           { value: null, text: 'Все локации' },
           { value: this.locations[0].name, text: this.locations[0].name },
           { value: this.locations[1].name, text: this.locations[1].name },
           { value: this.locations[2].name, text: this.locations[2].name },
         ]
-      }).catch(error => {
-        alert(error.message)
-      });
     },
     getCompanyId(data) {
       console.log(data)

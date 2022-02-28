@@ -160,71 +160,145 @@ export default {
   methods: {
 
     async fetchEmployees() {
-      await axios.get(`http://my-finecard.online/api/Employee/${localStorage.getItem('companyId')}`, {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-            "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
-            "Authorization": `Bearer ${localStorage.getItem('authToken')}`
-          }
-        }
-      ).then(response => {
-        this.employees = response.data
-      }).catch(error => {
-        alert(error.message)
-      });
+      // await axios.get(`http://my-finecard.online/api/Employee/${localStorage.getItem('companyId')}`, {
+      //     headers: {
+      //       "Access-Control-Allow-Origin": "*",
+      //       "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+      //       "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
+      //       "Authorization": `Bearer ${localStorage.getItem('authToken')}`
+      //     }
+      //   }
+      // ).then(response => {
+      //   this.employees = response.data
+      // }).catch(error => {
+      //   alert(error.message)
+      // });
+
+      this.employees = [
+        {
+          id: 1,
+          name: "Александр",
+          surname: "Власов",
+          position: "Сотрудник",
+          location: "Simple Coffee Малышева",
+          email: "alex12@yandex.ru",
+          companyId: 1,
+          archived: false
+        },
+        {
+          id: 2,
+          name: "Марина",
+          surname: "Кондратьева",
+          position: "Сотрудник",
+          location: "Simple Coffee Малышева",
+          email: "marin2000@gmail.com",
+          companyId: 1,
+          archived: false
+        },
+        {
+          id: 3,
+          name: "Иван",
+          surname: "Попов",
+          position: "Сотрудник",
+          location: "Simple Coffee Щербакова",
+          email: "myEmailVanya_@yandex.ru",
+          companyId: 1,
+          archived: false
+        },
+        {
+          id: 4,
+          name: "Кирилл",
+          surname: "Минин",
+          position: "Сотрудник",
+          location: "Simple Coffee Щербакова",
+          email: "denchick100@yandex.ru",
+          companyId: 1,
+          archived: false
+        },
+        {
+          id: 5,
+          name: "Дарья",
+          surname: "Морозова",
+          position: "Сотрудник",
+          location: "Simple Coffee Мельникова",
+          email: "dasha_moroz2002@yandex.ru",
+          companyId: 1,
+          archived: false
+        },
+        {
+          id: 6,
+          name: "Ксения",
+          surname: "Латвина",
+          position: "Сотрудник",
+          location: "Simple Coffee Мельникова",
+          email: "kissusha444@gmail.com",
+          companyId: 1,
+          archived: false
+        },
+      ]
+
     },
 
     async createEmployee(employee) {
-      await axios.post(`http://my-finecard.online/api/Employee`,
-        {
-          name: employee.name,
-          surname: employee.surname,
-          position: employee.position,
-          email: employee.email,
-          companyId: localStorage.getItem('companyId'),
-          archived: false,
-
-          location: {
-            address: "kek",
-            archived: false,
-            companyId: 1,
-            name: "lol"
-          },
-          locationId: 12
-
-        },{
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-            "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
-            "Authorization": `Bearer ${localStorage.getItem('authToken')}`
-          }
-        }
-      ).then(response => {
-        console.log(response.data)
-      }).catch(_ => this.createDialogVisible = false)
+      // await axios.post(`http://my-finecard.online/api/Employee`,
+      //   {
+      //     name: employee.name,
+      //     surname: employee.surname,
+      //     position: employee.position,
+      //     email: employee.email,
+      //     companyId: localStorage.getItem('companyId'),
+      //     archived: false,
+      //
+      //     location: {
+      //       address: "kek",
+      //       archived: false,
+      //       companyId: 1,
+      //       name: "lol"
+      //     },
+      //     locationId: 12
+      //
+      //   },{
+      //     headers: {
+      //       "Access-Control-Allow-Origin": "*",
+      //       "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+      //       "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
+      //       "Authorization": `Bearer ${localStorage.getItem('authToken')}`
+      //     }
+      //   }
+      // ).then(response => {
+      //   console.log(response.data)
+      // }).catch(_ => this.createDialogVisible = false)
+      this.employees.push({
+        id: 7,
+        name: employee.name,
+        surname: employee.surname,
+        position: employee.position,
+        email: employee.email,
+        companyId: 1,
+        archived: false,
+      })
     },
 
     async removeEmployee(employee) {
       employee.archived = false
-      await axios.put(`http://my-finecard.online/api/Employee/${employee.id}`,
-        {
-          employee
-        },
-        {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-            "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
-            "Authorization": `Bearer ${localStorage.getItem('authToken')}`
-          }
-        }
-      ).then(_ => {
-        // console.log(response.data)
-      }).catch(error => {
-        alert(error.message)
-      });
+      this.employees = this.employees.filter(e => e.id !== employee.id)
+      // await axios.put(`http://my-finecard.online/api/Employee/${employee.id}`,
+      //   {
+      //     employee
+      //   },
+      //   {
+      //     headers: {
+      //       "Access-Control-Allow-Origin": "*",
+      //       "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+      //       "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
+      //       "Authorization": `Bearer ${localStorage.getItem('authToken')}`
+      //     }
+      //   }
+      // ).then(_ => {
+      //   // console.log(response.data)
+      // }).catch(error => {
+      //   alert(error.message)
+      // });
     },
 
     editEmployee(employee) {
