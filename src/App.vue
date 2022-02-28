@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/online-finecard/startPage">StartPage</router-link> |
-      <router-link to="/online-finecard/statistic">Statistic</router-link> |
-      <router-link to="/online-finecard/locations">Locations</router-link> |
-      <router-link to="/online-finecard/clients">Clients</router-link> |
-      <router-link to="/online-finecard/employees">Employees</router-link> |
-      <router-link to="/online-finecard/settings">Settings</router-link>
+      <router-link to="/startPage">StartPage</router-link> |
+      <router-link to="/statistic">Statistic</router-link> |
+      <router-link to="/locations">Locations</router-link> |
+      <router-link to="/clients">Clients</router-link> |
+      <router-link to="/employees">Employees</router-link> |
+      <router-link to="/settings">Settings</router-link>
     </div>
     <router-view />
   </div>
