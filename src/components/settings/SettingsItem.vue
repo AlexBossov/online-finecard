@@ -1,12 +1,12 @@
 <template>
     <div>
       <div>
-        <div class="split left">
+        <div class="my-split left">
           <LeftSide :example="4"></LeftSide>
         </div>
-        <div class="split right">
-          <div class="right-side">
-            <p style="font-size: 30px">Настройки</p>
+        <div class="my-split my-right">
+          <div class="my-right-side">
+            <p style="font-size: 30px; margin-right: 800px">Настройки</p>
 
               <button
                 class="my_btn"
@@ -27,7 +27,7 @@
 
               <button
                 class="my_btn"
-                style="margin-left: 3%;"
+                style="margin-left: 3%; margin-right: 205px"
                 :class=" { selected_btn: selected_button === 3 } "
                 @click="selected_button = 3"
               >
@@ -36,7 +36,7 @@
 
               <button
                 class="my_btn"
-                style="margin-top: 3%"
+                style="margin-top: 3%; margin-right: 630px"
                 :class=" { selected_btn: selected_button === 4 } "
                 @click="selected_button = 4"
               >
@@ -45,7 +45,7 @@
 
 
             <div v-show="selected_button === 1">
-              <p style="font-size: 30px; margin-top: 2%;">Настройки Аккаунта</p>
+              <p style="font-size: 30px; margin-top: 2%; margin-right: 630px">Настройки Аккаунта</p>
 
               <b-form-group>
                 <b-form-input
@@ -65,13 +65,13 @@
                   style="width: 426px"
                 ></b-form-input>
               </b-form-group>
-              <button class="my_btn2">
+              <button class="my_btn2" style="margin-right: 735px">
                 Сохранить
               </button>
             </div>
 
             <div v-show="selected_button === 2">
-              <p style="font-size: 30px; margin-top: 2%;">Смена пароля</p>
+              <p style="font-size: 30px; margin-top: 2%; margin-right: 715px">Смена пароля</p>
               <b-form-group>
                 <b-form-input
                   id="input-large"
@@ -90,13 +90,13 @@
                   style="width: 426px"
                 ></b-form-input>
               </b-form-group>
-              <button class="my_btn2">
+              <button class="my_btn2" style="margin-right: 735px">
                 Сохранить
               </button>
             </div>
 
             <div v-show="selected_button === 3">
-              <p style="font-size: 30px; margin-top: 2%;">Настройка Компании</p>
+              <p style="font-size: 30px; margin-top: 2%; margin-right: 615px">Настройка Компании</p>
               <b-form-group>
                 <b-form-input
                   id="input-large"
@@ -116,7 +116,7 @@
                 ></b-form-input>
               </b-form-group>
 
-              <b-form-group>
+              <b-form-group style="margin-right: 655px">
                 <b-form-checkbox>
                   Начислять несколько штампов
                 </b-form-checkbox>
@@ -132,7 +132,7 @@
                 ></b-form-input>
               </b-form-group>
 
-              <button class="my_btn2">
+              <button class="my_btn2" style="margin-right: 735px">
                 Сохранить
               </button>
             </div>
@@ -226,8 +226,8 @@ export default {
 }
 </script>
 
-<style>
-.split {
+<style scoped>
+.my-split {
   height: 100%;
   position: fixed;
   z-index: 1;
@@ -241,13 +241,13 @@ export default {
   background-color: #E9E9E9;
 }
 
-.right {
+.my-right {
   right: 0;
   width: 75%;
   background-color: #E9E9E9;
 }
 
-.right-side {
+.my-right-side {
   margin-top: 2%;
   margin-left: 5%;
   margin-right: 5%;

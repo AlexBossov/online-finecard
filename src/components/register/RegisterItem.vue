@@ -65,7 +65,7 @@
 
         <b-form-group style="margin: 0 0; padding: 0 0">
           <button
-            class="btn_text"
+            class="my_btn_text"
             style="color: #FF6347"
             v-on:click="$emit('changeForm', 'login')"
           >
@@ -131,7 +131,7 @@ export default {
   height: 500px;
   width: 400px;
 }
-.btn_text {
+.my_btn_text {
   border: none;
   background-color: inherit;
   padding: 0 0;

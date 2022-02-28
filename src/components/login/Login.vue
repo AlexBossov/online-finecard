@@ -54,7 +54,7 @@
           <b-form-group>
             <p style="color: gray;margin-top: 30px; margin-bottom: 0">Нет Аккаунта?</p>
             <button
-              class="btn_text"
+              class="my_btn_text"
               @click="$emit('changeForm', 'register')"
             >
               Зарегистрироваться
@@ -151,7 +151,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .btn {
   background-color:	#FF6347;
   width: 300px;
@@ -166,7 +166,7 @@ export default {
   height: 500px;
   width: 400px;
 }
-.btn_text {
+.my_btn_text {
   border: none;
   background-color: inherit;
   padding: 0;

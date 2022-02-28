@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="split left">
+    <div class="my-split left">
 
       <LeftSide
         :companyId="companyId"
@@ -9,9 +9,9 @@
       />
 
     </div>
-    <div class="split right">
-      <div class="right-side">
-        <p style="font-size: 30px">Сотрудники</p>
+    <div class="my-split my-right">
+      <div class="my-right-side">
+        <p style="font-size: 30px; margin-right: 800px">Сотрудники</p>
 
         <div style="margin-top: 3%">
           <button
@@ -33,7 +33,8 @@
             border-top: none;
             border-right: none;
             border-left: none;
-            background-color: inherit;"
+            background-color: inherit;
+            margin-right: 365px"
             @click="changeEmployeesToArchival"
             :class="{ btn_underline : !currentEmployeesIndicator, btn_common : currentEmployeesIndicator }"
           >
@@ -268,7 +269,7 @@ export default {
 </script>
 
 <style>
-.split {
+.my-split {
   height: 100%;
   position: fixed;
   z-index: 1;
@@ -282,13 +283,13 @@ export default {
   background-color: #E9E9E9;
 }
 
-.right {
+.my-right {
   right: 0;
   width: 75%;
   background-color: #E9E9E9;
 }
 
-.right-side {
+.my-right-side {
   margin-top: 2%;
   margin-left: 5%;
   margin-right: 5%;

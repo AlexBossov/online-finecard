@@ -5,20 +5,20 @@
 <!--      <canvas ref="canvas"></canvas>-->
 <!--    </div>-->
     <div>
-      <div class="split left">
+      <div class="my-split left">
         <LeftSide
           @giveCompanyId="getCompanyId"
           :example="0"
         />
       </div>
-      <div class="split right">
-        <p style="font-size: 36px; margin-top: 2%;" class="right-side">Статистика</p>
+      <div class="my-split my-right">
+        <p style="font-size: 36px; margin-top: 2%; margin-right: 805px" class="my-right-side">Статистика</p>
         <div>
           <b-form-select
             size="large"
             v-model="selectedOption"
             :options="options"
-            style="margin-left: 5%; width: 300px"
+            style="margin-left: 5%; width: 300px; margin-right: 805px"
           />
         </div>
 
@@ -57,6 +57,7 @@
           border-right: none;
           border-left: none;
           background-color: inherit;
+          margin-right: 265px;
           "
             :class="{ btn_underline : selected === 3, btn_common : selected !== 3 }"
             @click="selected = 3"
@@ -788,7 +789,7 @@ export default {
 
 <style>
 
-.split {
+.my-split {
   height: 100%;
   position: fixed;
   z-index: 1;
@@ -803,7 +804,7 @@ export default {
   background-color: #E9E9E9;
 }
 
-.right {
+.my-right {
   right: 0;
   width: 75%;
   background-color: #E9E9E9;
@@ -817,7 +818,7 @@ export default {
   text-align: center;
 }
 
-.right-side {
+.my-right-side {
   margin-top: 2%;
   margin-left: 5%;
   margin-right: 5%;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="split left">
+    <div class="my-split left">
       <div class="centered">
         <div class="transformer">
           <span style="color: gray">Card</span><span style="color: mediumpurple;">fine</span><span  style="color: gray">Cardf</span><br>
@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-    <div class="split right">
+    <div class="my-split my-right">
       <div class="centered">
         <Register v-if=" form === 'register' " v-on:changeForm="changeForm"></Register>
         <login-item v-if=" form === 'login' " v-on:changeForm="changeForm"></login-item>
@@ -53,7 +53,7 @@ div::-webkit-scrollbar {
   width: 0;
 }
 
-.split {
+.my-split {
   height: 100%;
   width: 50%;
   position: fixed;
@@ -68,7 +68,7 @@ div::-webkit-scrollbar {
   background-color: #E9E9E9;
 }
 
-.right {
+.my-right {
   right: 0;
   background-color: #E9E9E9;
 }

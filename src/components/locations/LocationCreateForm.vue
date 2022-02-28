@@ -76,7 +76,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 b-form-group {
   display: flex;
   flex-direction: column;

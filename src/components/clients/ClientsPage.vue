@@ -1,12 +1,12 @@
 <template>
     <div>
       <div>
-        <div class="split left">
+        <div class="my-split left">
           <LeftSide :example="1" />
         </div>
-        <div class="split right">
-          <div class="right-side">
-            <p style="font-size: 30px">Клиенты</p>
+        <div class="my-split my-right">
+          <div class="my-right-side">
+            <p style="font-size: 30px; margin-right: 800px">Клиенты</p>
             <button class="my_btn">Отправить пуш</button>
             <div style="width: 700px">
             </div>
@@ -20,7 +20,6 @@
               border-radius: 11px;"
               placeholder="Поиск по номеру телефону"
             />
-
             <clients-table :clients="clients"></clients-table>
           </div>
         </div>
@@ -91,8 +90,8 @@ export default {
 }
 </script>
 
-<style>
-.split {
+<style scoped>
+.my-split {
   height: 100%;
   position: fixed;
   z-index: 1;
@@ -106,13 +105,13 @@ export default {
   background-color: #E9E9E9;
 }
 
-.right {
+.my-right {
   right: 0;
   width: 75%;
   background-color: #E9E9E9;
 }
 
-.right-side {
+.my-right-side {
   margin-top: 2%;
   margin-left: 5%;
   margin-right: 5%;
