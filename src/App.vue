@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/startPage">StartPage</router-link>
+      <router-link to="/online-finecard/startPage">StartPage</router-link>
     </div>
     <router-view />
   </div>

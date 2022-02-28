@@ -8,12 +8,12 @@ import EmployeesPage from "./components/employees/EmployeesPage";
 import Settings from "./components/settings/SettingsItem";
 
 export default [
-    {name: 'login', path: '/login', component: LoginItem},
-    {name: 'register', path: '/register', component: Register},
-    {name: 'startPage', path: '/startPage', component: StartPage},
-    {name: 'statistic', path: '/statistic', component: Statistic},
-    {name: 'locations', path: '/locations', component: LocationsPage, props: true},
-    {name: 'clients', path: '/clients', component: ClientsPage},
-    {name: 'employees', path: '/employees', component: EmployeesPage, props: true},
-    {name: 'settings', path: '/settings', component: Settings},
+    {name: 'login', path: '/online-finecard/login', component: LoginItem},
+    {name: 'register', path: '/online-finecard/register', component: Register},
+    {name: 'startPage', path: '/online-finecard/startPage', component: StartPage},
+    {name: 'statistic', path: '/online-finecard/statistic', component: Statistic},
+    {name: 'locations', path: '/online-finecard/locations', component: LocationsPage, props: true},
+    {name: 'clients', path: '/online-finecard/clients', component: ClientsPage},
+    {name: 'employees', path: '/online-finecard/employees', component: EmployeesPage, props: true},
+    {name: 'settings', path: '/online-finecard/settings', component: Settings},
 ]
