@@ -8,7 +8,7 @@
 
           <b-card-group>
             <button
-              onclick="location.href='/statistic'"
+              onclick="location.href='/online-finecard/index.html#/statistic'"
               @click="giveAuth"
               class="my_btn_text"
             >
