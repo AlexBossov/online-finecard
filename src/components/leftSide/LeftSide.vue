@@ -17,31 +17,31 @@
           </b-card-group>
 
           <b-card-group>
-            <button onclick="location.href='/clients'" class="my_btn_text">
+            <button onclick="location.href='/online-finecard/index.html#/clients'" class="my_btn_text">
               <span :class="{ bold: example === 1}">Клиенты</span>
             </button>
           </b-card-group>
 
           <b-card-group>
-            <button onclick="location.href='/locations'" class="my_btn_text">
+            <button onclick="location.href='/online-finecard/index.html#/locations'" class="my_btn_text">
               <span :class="{ bold: example === 2}">Локации</span>
             </button>
           </b-card-group>
 
           <b-card-group>
-            <button onclick="location.href='/employees'" class="my_btn_text">
+            <button onclick="location.href='/online-finecard/index.html#/employees'" class="my_btn_text">
               <span :class="{ bold: example === 3 }">Сотрудники</span>
             </button>
           </b-card-group>
 
           <b-card-group>
-            <button onclick="location.href='/settings'" class="my_btn_text">
+            <button onclick="location.href='/online-finecard/index.html#/settings'" class="my_btn_text">
               <span :class="{ bold: example === 4 }">Настройки</span>
             </button>
           </b-card-group>
 
         <b-card-group style="margin-top: 150px">
-          <button onclick="location.href='/startPage'" class="my_btn_text">
+          <button onclick="location.href='/online-finecard/index.html#/startPage'" class="my_btn_text">
             <span>Выйти из аккаунта</span>
           </button>
         </b-card-group>
